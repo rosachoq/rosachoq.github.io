@@ -1,0 +1,92 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "pt" }}">
+  {% include head.html %}
+  <body class="is-loading">
+    <div id="wrapper" aria-label="Content">
+      {% include header.html %}
+      <nav id="nav">
+        {% include nav_represent.html%}
+      </nav>
+      <div id="main">
+        <section>
+          <header class="major">
+            <h1>Isso que é vida de<br>patroa!</h1>
+            <p>Trabalhe onde e quando quiser, lucro de 30% ou mais na revenda e prêmios exclusivos!</p>
+            <p>Você precisa ser maior de <b>18 anos</b></p>
+            <p>Preencher o formulário abaixo</p>
+            <p>Que em breve a executiva mais próxima entrará em contato com você!</p>
+          </header>
+          <form id="contact-form" method="POST">
+            <div class="field">
+              <label for="name">Seus dados</label>
+              <input type="text" placeholder="Nome" name="nome" id="fieldName" required
+                     maxlength="25"
+                     pattern="[a-zA-Z]*"
+                     oninvalid="this.setCustomValidity('Você esqueceu de colocar o seu Nome')"
+                     oninput="this.setCustomValidity('')">
+              <input type="text" placeholder="Sobrenome" name="sobrenome" id="fieldSur" required
+                     maxlength="25"
+                     pattern="[a-zA-Z]*"
+                     oninvalid="this.setCustomValidity('Você esqueceu de colocar o seu Sobrenome')"
+                     oninput="this.setCustomValidity('')">
+              <input type="text" placeholder="CPF" name="cpf" id="fieldCPF" required="required"
+                     maxlength="14"
+                     pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                     oninvalid="this.setCustomValidity('Preencha o campo CPF com pontos e traço: 123.456.789-11')"
+                     oninput="this.setCustomValidity('')">
+            </div>
+            <div class="field">
+              <label for="name">Seu Endereço</label>
+              <input type="text" placeholder="Rua, Avenida..." name="endereço" id="fieldAddres" required
+                     oninvalid="this.setCustomValidity('Você esqueceu de colocar o seu Endereço!')"
+                     oninput="this.setCustomValidity('')">
+              <input type="text" placeholder="Número" name="numero" id="fieldNumber">
+              <input type="text" placeholder="Bairro" name="bairro" id="fieldNeighbor" required
+                     maxlength="50"
+                     pattern="[a-zA-Z]*"
+                     oninvalid="this.setCustomValidity('Você esqueceu de colocar o Bairro onde mora!')"
+                     oninput="this.setCustomValidity('')">
+              <input type="text" placeholder="Cidade" name="cidade" id="fieldCity" required
+                     maxlength="50"
+                     pattern="[a-zA-Z]*"
+                     oninvalid="this.setCustomValidity('Você esqueceu de colocar a Cidade onde mora!')"
+                     oninput="this.setCustomValidity('')">
+              <select name="estado" id="uf">
+        	       {% include states.html %}
+               </select>
+            </div>
+            <div class="field">
+              <label for="info">Informações para contato</label>
+              <input type="email" placeholder="Email" name="email" id="fieldEmail" required
+                     oninvalid="this.setCustomValidity('Você esqueceu de colocar o seu Email!')"
+                     oninput="this.setCustomValidity('')">
+              <input type="text" placeholder="Telefone" name="telefone" id="fieldTel"
+                     maxlength="12"
+                     pattern="\d{2}[\-]\d{4}[\-]\d{4}">
+              <input type="text" placeholder="Celular" name="celular" id="fieldCel" required
+                     maxlength="13"
+                     pattern="\d{2}[\-]\d{5}[\-]\d{4}"
+                     oninvalid="this.setCustomValidity('Você esqueceu de colocar o seu Celular / Whatsapp')"
+                     oninput="this.setCustomValidity('')">
+            </div>
+
+            <input class="is-hidden" type="text" name="_gotcha" style="display:none">
+            <input type="hidden" name="_subject" value="Blog da Executiva">
+            <input type="hidden" name="_cc" value="email@cc.com">
+
+            <ul class="actions">
+              <label for="info">* Preencha todos os campos</label>
+              <li><input id="myBtn" type="submit" value="Enviar" /></li>
+            </ul>
+          </form>
+        </section>
+      </div>
+      {% include footer.html %}
+      {% include copyright.html %}
+    </div>
+    {% include scripts.html %}
+  </body>
+</html>

@@ -1,0 +1,32 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "pt" }}">
+  {% include head.html %}
+  <body class="is-loading">
+    <div id="wrapper" aria-label="Content">
+      {% include header.html %}
+      <nav id="nav">
+        {% include nav_index.html %}
+      </nav>
+      <div id="main">
+        <section class="post">
+          <header class="major">
+            <span class="date">{{ page.date | date: "%d/%m/%Y" }}</span>
+            <h1 itemprop="name headline">{{ page.title | escape }}</h1>
+            {{ page.excerpt }}
+          </header>
+
+          <div class="image main"><img src="{{ page.image }}" alt=""></div>
+
+          {{ content }}
+        </section>
+      </div>
+
+      {% include footer.html %}
+      {% include copyright.html %}
+    </div>
+    {% include scripts.html %}
+  </body>
+</html>

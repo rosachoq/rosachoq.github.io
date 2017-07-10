@@ -1,0 +1,16 @@
+<article class="post featured">
+  {% assign posts=site.posts  %}
+  {% for post in posts limit: 1 %}
+    <header class="major">
+      <span class="date">{{ post.date | date: "%d/%m/%Y" }}</span>
+      <h2><a href="{{ post.url | prepand: site.baseurl }}">{{ post.title | escape }}</a></h2>
+      <p>{{ post.excerpt }}</p>
+    </header>
+    <a href="{{ post.url | prepend: site.baseurl }}" class="image main"><img src="{{ post.image }}" alt=""></a>
+    {% if post.excerpt %}
+    <ul class="actions">
+      <li><a href="{{ post.url | prepend: site.baseurl }}" class="button big">Saiba Mais</a></li>
+    </ul>
+    {% endif %}
+  {% endfor %}
+</article>

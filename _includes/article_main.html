@@ -1,0 +1,13 @@
+<article>
+  <header>
+    <span class="date">{{ post.date | date: "%d/%m/%Y" }}</span>
+		<h2><a href="{{ post.url | prepand: site.baseurl }}">{{ post.title | escape }}</a></h2>
+	</header>
+  <a href="{{ post.url | prepend: site.baseurl }}" class="image fit"><img src="{{ post.image }}" alt=""></a>
+  <p>{{ post.excerpt }}</p>
+  {% if post.excerpt %}
+  <ul class="actions">
+    <li><a href="{{ post.url | prepend: site.baseurl }}" class="button">Saiba Mais</a></li>
+	</ul>
+  {% endif %}
+</article>

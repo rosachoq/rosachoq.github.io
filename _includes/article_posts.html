@@ -1,0 +1,6 @@
+<section class="posts">
+  {% assign posts=site.posts  %}
+  {% for post in posts offset: 1 limit: 10 %}
+    {% include article_main.html %}
+  {% endfor %}
+</section>
