@@ -2,7 +2,7 @@ title: Rosa Choq
 email: rosildalino@hotmail.com
 description: Tudo sobre produtos, vendas e como ser uma representante Avon.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://rosachoq.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: /:title
 

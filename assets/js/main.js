@@ -271,7 +271,7 @@
 				var defaultSubmitText = $submit.val();
 
 				$.ajax({
-					url: '//formspree.io/your@email.com',
+					url: '//formspree.io/rosildalino@hotmail.com',
 					method: 'POST',
 					data: $(this).serialize(),
 					dataType: 'json',

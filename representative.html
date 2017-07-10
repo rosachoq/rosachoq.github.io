@@ -32,7 +32,7 @@ layout: compress
                      pattern="[a-zA-Z]*"
                      oninvalid="this.setCustomValidity('Você esqueceu de colocar o seu Sobrenome')"
                      oninput="this.setCustomValidity('')">
-              <input type="text" placeholder="CPF" name="cpf" id="fieldCPF" required="required"
+              <input type="text" placeholder="CPF | preencher com pontos e traço: 123.456.789-11" name="cpf" id="fieldCPF" required="required"
                      maxlength="14"
                      pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
                      oninvalid="this.setCustomValidity('Preencha o campo CPF com pontos e traço: 123.456.789-11')"
@@ -63,18 +63,18 @@ layout: compress
               <input type="email" placeholder="Email" name="email" id="fieldEmail" required
                      oninvalid="this.setCustomValidity('Você esqueceu de colocar o seu Email!')"
                      oninput="this.setCustomValidity('')">
-              <input type="text" placeholder="Telefone" name="telefone" id="fieldTel"
+              <input type="text" placeholder="Telefone | preencher com traços: 01-2345-6789" name="telefone" id="fieldTel"
                      maxlength="12"
                      pattern="\d{2}[\-]\d{4}[\-]\d{4}">
-              <input type="text" placeholder="Celular" name="celular" id="fieldCel" required
+              <input type="text" placeholder="Celular | preencher com traços: 01-23456-7891" name="celular" id="fieldCel" required
                      maxlength="13"
                      pattern="\d{2}[\-]\d{5}[\-]\d{4}"
                      oninvalid="this.setCustomValidity('Você esqueceu de colocar o seu Celular / Whatsapp')"
                      oninput="this.setCustomValidity('')">
             </div>
 
-            <input class="is-hidden" type="text" name="_gotcha" style="display:none">
-            <input type="hidden" name="_subject" value="Blog da Executiva">
+            <input class="hidden" type="text" name="_gotcha" style="display:none">
+            <input type="hidden" name="_subject" value="Equipe Rosa Choq">
             <input type="hidden" name="_cc" value="email@cc.com">
 
             <ul class="actions">
