@@ -9,6 +9,10 @@ permalink: /:title
 # Build settings
 markdown: kramdown
 
+kramdown:
+  parse_block_html: true
+
+
 sass:
   sass_dir: assets/sass
   style: compressed

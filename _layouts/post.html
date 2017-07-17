@@ -5,6 +5,7 @@ layout: compress
 <html lang="{{ page.lang | default: site.lang | default: "pt" }}">
   {% include head.html %}
   <body class="is-loading">
+    {% include facebook-comments.html %}
     <div id="wrapper" aria-label="Content">
       {% include header.html %}
       <nav id="nav">
@@ -21,9 +22,13 @@ layout: compress
           <div class="image main"><img src="{{ page.image }}" alt=""></div>
 
           {{ content }}
+          {% if page.fbcomments %}
+            <hr/>
+            <h4>Comemtários</h4>
+            <div class="fb-comments" data-href="{{ site.url }}{{ page.url }}" data-colorscheme="dark" data-num-posts="4" data-width="706"></div>
+          {% endif %}
         </section>
       </div>
-
       {% include footer.html %}
       {% include copyright.html %}
     </div>
