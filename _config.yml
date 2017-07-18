@@ -4,6 +4,8 @@ description: Tudo sobre produtos, vendas e como ser uma representante Avon.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://rosachoq.com" # the base hostname & protocol for your site, e.g. http://example.com
 
+facebook_username: revendaavonpg
+
 permalink: /:title
 
 # Build settings
